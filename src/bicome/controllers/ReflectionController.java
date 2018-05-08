@@ -20,7 +20,7 @@ import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 
 
-public class ReflectionController { //implements Initializable {
+public class ReflectionController implements Initializable {
 
     @FXML
     private AnchorPane anchorPane;
