@@ -1,4 +1,4 @@
-package sample;
+package bicome.controllers;
 
 import com.jfoenix.controls.*;
 import javafx.collections.ObservableList;
@@ -17,7 +17,7 @@ import javafx.scene.layout.StackPane;
 import javafx.animation.RotateTransition;
 import javafx.scene.shape.Rectangle;
 
-public class Controller {
+public class GameController implements Initializable {
 
 
     @FXML
@@ -172,8 +172,8 @@ public class Controller {
         imageOfAnimal.setImage(image);
     }
 
-    @FXML
-    private void reflectionDialog() {    //onur'dan aldım ????????
+/*    @FXML
+    private void reflectionDialog() {    //onur'dan aldım ????????????????
         if (isGameOver()) {
 
             JFXDialogLayout dialogLayout = new JFXDialogLayout();
@@ -184,6 +184,7 @@ public class Controller {
             dialog.show();
         }
     }
+    */
 
     private void initialize() {
         theGrid = new Organism[30][30];
