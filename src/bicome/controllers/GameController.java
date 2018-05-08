@@ -21,7 +21,7 @@ import javafx.event.ActionEvent;
 
 import javax.swing.*;
 
-public class GameController {
+public class GameController implements Initalizable {
 
     @FXML
     private ImageView imageOfAnimal;
