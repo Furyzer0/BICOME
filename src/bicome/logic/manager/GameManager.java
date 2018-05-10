@@ -70,6 +70,8 @@ public class GameManager
          }
          else
          {
+            //inform controller the game is over. 
+            controller.finishGame();
             System.out.println("game is over");
             TimeListener.this.cancel();
          }
