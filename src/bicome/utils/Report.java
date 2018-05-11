@@ -56,7 +56,7 @@ public class Report
     {
         String text = "";
         String line = null;
-        
+
         try
         {
             if (bufferedReader.readLine() == null)
@@ -75,34 +75,49 @@ public class Report
             }
             date = new Date();
             writer.write("Date: " + dateFormatter.format(date) + " ");
-            for(String s : getFeatures(gameManager.getWorld().getFirstOrganism().getFeatures()))
-            {
-                writer.write(s + ", ");
-            }
-            for(String s: getEnvironmentalFactorConditions(gameManager.getWorld().getEnvironment()))
+            for (String s : getFeatures(gameManager.getWorld().getFirstOrganism().getFeatures()))
             {
                 writer.write(s + " ");
             }
-            
+            for (String s : getEnvironmentalFactorConditions(gameManager.getWorld().getEnvironment()))
+            {
+                writer.write(s + " ");
+            }
+
             writer.write(gameManager.getYearsPassed() + " years passed, ");
             writer.write("survival rate: " + gameManager.getWorld().getFinalSurvivalRate() + " ");
-            if(gameManager.gameIsWon())
+            if (gameManager.gameIsWon())
             {
                 writer.write("Result: won");
-            }
-            else
+            } else
             {
                 writer.write("Result: lost");
             }
             writer.flush();
-            
-            
 
         } catch (Exception e)
         {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    public String returnReport()
+    {
+        String result = "";
+        String line = null;
+        try
+        {
+
+            while ((line = bufferedReader.readLine()) != null)
+            {
+                result += line;
+            }
+        } catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return result;
     }
 
     /**
@@ -113,7 +128,7 @@ public class Report
     public ArrayList<String> getFeatures(FeatureList featureList)
     {
         ArrayList<String> features = new ArrayList<>();
-        for(int i = 0; i < 6; i++)
+        for (int i = 0; i < 6; i++)
         {
             features.add("");
         }
