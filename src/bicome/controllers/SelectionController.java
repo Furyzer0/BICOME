@@ -233,16 +233,16 @@ public class SelectionController implements Initializable
             furDom.setVisible(selected);
         }
         else if (feature.toString().equals("Long Leg") ){
-            legsDom.setVisible(selected);
-        }
-        else if (feature.toString().equals("Short Leg")) {
             legsRec.setVisible(selected);
         }
+        else if (feature.toString().equals("Short Leg")) {
+            legsDom.setVisible(selected);
+        }
         else if (feature.toString().equals("Small Hump")) {
-            humpDom.setVisible(selected);
+            humpRec.setVisible(selected);
         }
         else if (feature.toString().equals("Big Hump")) {
-            humpRec.setVisible(selected);
+            humpDom.setVisible(selected);
         }
         else if (feature.toString().equals("Heavy Muscles")){
             rightMuscleDom.setVisible(selected);
